@@ -1,66 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌱 AgriSense API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**AgriSense API** est le backend principal du système **AgriSense**, une plateforme intelligente de gestion agricole à Madagascar.  
+Elle centralise les informations sur les **semences, produits agricoles** et les **caractéristiques climatiques régionales**, tout en intégrant des **modules d’intelligence artificielle** pour l’analyse et la prédiction des productions.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Fonctionnalités principales
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **🔍 Recherche de semences et produits agricoles**  
+  Permet la recherche avancée par type, climat adapté, région ou cycle de culture.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **📦 Enregistrement et gestion des produits**  
+  Gestion CRUD complète des produits agricoles avec détails (variété, besoins, rendement, sol adapté, etc.).
 
-## Learning Laravel
+- **🌍 Gestion des cultures par région**  
+  Association des produits aux régions de Madagascar selon leurs conditions agroclimatiques.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **🌦️ Gestion des données climatiques régionales**  
+  Stockage et exposition des données météo : température, humidité, pluviométrie, types de sol, etc.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **🤖 Module d’intelligence artificielle**  
+  Fournit des recommandations sur les cultures adaptées, prédictions de rendement, alertes sur risques climatiques.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **📊 API d’analyses et tableaux de bord**  
+  Génération de statistiques, rapports et indicateurs clés via des endpoints analytiques.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🧰 Stack technique
 
-### Premium Partners
+- **Framework :** ASP.NET Core / NestJS / Django REST Framework  
+- **Langage :** C# / TypeScript / Python  
+- **Base de données :** PostgreSQL (prise en charge des géodonnées avec PostGIS)  
+- **ORM :** Entity Framework Core / TypeORM / Django ORM  
+- **Authentification :** JWT + Refresh Tokens  
+- **Tests :** xUnit / Jest / Pytest  
+- **CI/CD :** Azure DevOps / GitHub Actions  
+- **Documentation API :** Swagger / OpenAPI  
+- **IA / ML :** Microservice Python (FastAPI, Scikit-learn, TensorFlow)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## 🗺️ Architecture simplifiée
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+[Frontend AgriSense] ⇄ [AgriSense API Backend] ⇄ [PostgreSQL + AI Engine]
+        │
+        ├── /api/products
+        ├── /api/seeds
+        ├── /api/regions
+        ├── /api/climate
+        └── /api/analytics
+```
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 💡 Objectif
 
-## Security Vulnerabilities
+Centraliser les données agricoles et climatiques de Madagascar, tout en offrant une base solide pour la **prise de décision, l’analyse et la planification durable** des cultures.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## ⚙️ Installation & démarrage (exemple pour .NET)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+# Cloner le projet
+git clone https://github.com/tonprofil/agrisense-api.git
+cd agrisense-api
+
+# Restaurer les dépendances
+dotnet restore
+
+# Appliquer les migrations
+dotnet ef database update
+
+# Lancer le serveur
+dotnet run
+```
+
+L’API sera accessible sur :
+```
+http://localhost:5000/swagger
+```
+
+---
+
+## 📜 Licence
+
+Ce projet est distribué sous la licence **MIT**.
