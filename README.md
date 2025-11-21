@@ -1,6 +1,6 @@
-# 🌱 AgriSense API
+# 🌱 AgriTop API
 
-**AgriSense API** est le backend principal du système **AgriSense**, une plateforme intelligente de gestion agricole à Madagascar.  
+**AgriTop API** est le backend principal du système **AgriTop**, une plateforme intelligente de gestion agricole à Madagascar.  
 Elle centralise les informations sur les **semences, produits agricoles** et les **caractéristiques climatiques régionales**, tout en intégrant des **modules d’intelligence artificielle** pour l’analyse et la prédiction des productions.
 
 ---
@@ -29,13 +29,13 @@ Elle centralise les informations sur les **semences, produits agricoles** et les
 
 ## 🧰 Stack technique
 
-- **Framework :** ASP.NET Core / NestJS / Django REST Framework  
-- **Langage :** C# / TypeScript / Python  
+- **Framework :** Spring / REST Framework  
+- **Langage :** Java  
 - **Base de données :** PostgreSQL (prise en charge des géodonnées avec PostGIS)  
-- **ORM :** Entity Framework Core / TypeORM / Django ORM  
+- **ORM :** Spring ORM 
 - **Authentification :** JWT + Refresh Tokens  
-- **Tests :** xUnit / Jest / Pytest  
-- **CI/CD :** Azure DevOps / GitHub Actions  
+- **Tests :** xUnit  
+- **CI/CD :** GitHub Actions  / Jenkins
 - **Documentation API :** Swagger / OpenAPI  
 - **IA / ML :** Microservice Python (FastAPI, Scikit-learn, TensorFlow)
 
@@ -44,7 +44,7 @@ Elle centralise les informations sur les **semences, produits agricoles** et les
 ## 🗺️ Architecture simplifiée
 
 ```
-[Frontend AgriSense] ⇄ [AgriSense API Backend] ⇄ [PostgreSQL + AI Engine]
+[Frontend AgriTop] ⇄ [AgriTop API Backend] ⇄ [PostgreSQL + AI Engine]
         │
         ├── /api/products
         ├── /api/seeds
@@ -61,21 +61,16 @@ Centraliser les données agricoles et climatiques de Madagascar, tout en offrant
 
 ---
 
-## ⚙️ Installation & démarrage (exemple pour .NET)
+## ⚙️ Installation & démarrage 
 
 ```bash
 # Cloner le projet
-git clone https://github.com/tonprofil/agrisense-api.git
-cd agrisense-api
+git clone https://github.com/tonprofil/agritop-api.git
+cd agritop-api
 
 # Restaurer les dépendances
-dotnet restore
-
 # Appliquer les migrations
-dotnet ef database update
-
 # Lancer le serveur
-dotnet run
 ```
 
 L’API sera accessible sur :
